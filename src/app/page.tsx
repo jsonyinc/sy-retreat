@@ -1,3 +1,5 @@
+// src/app/page.tsx
+
 import { TopHeader } from "@/components/domain/top-header"
 import { HeroSection } from "@/components/domain/hero-section"
 import { MasterProfileSection } from "@/components/domain/master-profile-section"
@@ -5,7 +7,10 @@ import { InfinityHealingSection } from "@/components/domain/infinity-healing-sec
 import { ZoneCardsSection } from "@/components/domain/zone-cards-section"
 import { WellnessProgramSection } from "@/components/domain/wellness-program-section"
 import { PartnershipSection } from "@/components/domain/partnership-section"
-import { BusinessInquiry } from "@/components/domain/business-inquiry"
+
+// 🚨 수정된 부분: 실제 파일명과 Export된 컴포넌트명으로 정확히 매핑합니다.
+import { BusinessInquiryForm } from "@/components/domain/BusinessInquiryForm" 
+
 import { Footer } from "@/components/domain/footer"
 
 export default function Home() {
@@ -18,7 +23,10 @@ export default function Home() {
       <ZoneCardsSection />
       <WellnessProgramSection />
       <PartnershipSection />
-      <BusinessInquiry />
+      
+      {/* 🚨 수정된 부분: 호출하는 컴포넌트 태그를 BusinessInquiryForm으로 변경합니다. */}
+      <BusinessInquiryForm />
+      
       <Footer />
     </main>
   )
