@@ -30,7 +30,7 @@ export function BusinessInquiryForm() {
   }
 
   return (
-    <section className="bg-[#2C3E1A] text-[#F9F6F0] py-24 px-6 md:px-12">
+    <section id="business-inquiry" className="bg-[#2C3E1A] text-[#F9F6F0] py-24 px-6 md:px-12">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-xs md:text-sm tracking-[0.3em] text-[#C5A880] uppercase mb-4">Business Inquiry</h2>
