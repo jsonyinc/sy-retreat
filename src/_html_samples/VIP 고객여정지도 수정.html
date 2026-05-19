@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUNYEOP ZEN RETREAT | 고객 여정 지도(CJM)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-dark: #0B192C;
+            --primary-teal: #00E5FF;
+            --secondary-teal: #00838F;
+            --text-light: #F8F9FA;
+            --text-dark: #333333;
+            --bg-light: #F4F7F6;
+            --table-border: #E0E0E0;
+        }
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            line-height: 1.6;
+        }
+        header {
+            background-color: var(--primary-dark);
+            color: var(--text-light);
+            padding: 60px 20px;
+            text-align: center;
+        }
+        header h1 {
+            color: var(--primary-teal);
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+        header p {
+            font-size: 1.1rem;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+        section {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 40px 30px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+        h2 {
+            color: var(--primary-dark);
+            border-bottom: 2px solid var(--primary-teal);
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        /* Mermaid 컨테이너 */
+        .mermaid-container {
+            background: #FAFAFA;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid var(--table-border);
+            margin-bottom: 40px;
+            overflow-x: auto;
+        }
+        /* CJM 상세 테이블 스타일 */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            font-size: 0.95rem;
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--table-border);
+        }
+        th {
+            background-color: var(--primary-dark);
+            color: white;
+            font-weight: 500;
+        }
+        tr:hover {
+            background-color: #F5F5F5;
+        }
+        .stage-badge {
+            display: inline-block;
+            padding: 4px 10px;
+            background-color: var(--secondary-teal);
+            color: white;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: bold;
+        }
+        .ict-point {
+            color: #D84315;
+            font-weight: bold;
+            font-size: 0.85rem;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: var(--primary-dark);
+            color: white;
+            font-size: 0.9rem;
+        }
+    </style>
+    <!-- Mermaid.js 최신 버전 로드 -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({ 
+            startOnLoad: true, 
+            theme: 'base', 
+            themeVariables: { 
+                primaryColor: '#E1F5FE', 
+                primaryTextColor: '#0B192C', 
+                primaryBorderColor: '#00838F', 
+                lineColor: '#00838F' 
+            } 
+        });
+    </script>
+</head>
+<body>
+
+    <header>
+        <h1>Customer Journey Map (CJM)</h1>
+        <p>서비스 기획자 관점의 O2O 웰니스 라이프사이클 상세 기획</p>
+    </header>
+
+    <section>
+        <h2>1. 시각화된 고객 여정 지도 (Mermaid)</h2>
+        <p>고객의 브랜드 인지부터 도심-자연 교차 경험, 그리고 일상 복귀 후의 커머스(구독)까지 이어지는 감정선과 터치포인트를 시각화했습니다.</p>
+        
+        <div class="mermaid-container">
+            <!-- 
+              [수정 사항] 
+              1. '1:1'의 콜론(:)이 Mermaid 문법과 충돌하여 '개별 맞춤'으로 텍스트 수정
+              2. 텍스트 길이를 최적화하여 박스 밖으로 삐져나가는 현상 방지
+              3. 감정선(점수)을 3~5점으로 조정하여 여정의 다이내믹스 표현
+            -->
+            <div class="mermaid">
+                journey
+                    title 선엽 리트릿 VIP 고객 여정 지도
+                    section 1. 인지 및 예약
+                      VIP 초대 및 SNS 인지: 4: 고객
+                      App 사전 체질 설문: 3: 고객, 시스템
+                    section 2. 도심형 센터
+                      개별 맞춤 체질 상담: 5: 고객, 전문가
+                      침향 아로마 스파: 5: 고객
+                      자연형 리트릿 제안: 4: 시스템
+                    section 3. 자연형 리트릿
+                      팜스테이 도착 및 진단: 4: 고객
+                      새벽 차명상 및 치유: 5: 고객
+                      디톡스 식단 및 휴식: 5: 고객
+                    section 4. 일상 복귀
+                      사후 힐링 상담: 4: 고객, 시스템
+                      맞춤 약차 정기구독: 5: 고객
+            </div>
+        </div>
+
+        <h2>2. 단계별 상세 기획 및 ICT/데이터 전략</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th width="15%">여정 단계</th>
+                    <th width="20%">고객 행동 (Action)</th>
+                    <th width="35%">제공 서비스 (Touchpoint)</th>
+                    <th width="30%">ICT & 데이터 전략 (Service Planning)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="stage-badge">1. 인지/예약</span><br><br>Discovery</td>
+                    <td>VIP 초대장 수령, 앱 다운로드 및 방문 예약</td>
+                    <td>- VIP 프라이빗 네트워크 마케팅<br>- 모바일 App / Web 예약 시스템</td>
+                    <td><span class="ict-point">[Data]</span> 방문 전 '디지털 체질 문진표' 작성 유도. 수집된 데이터는 도심형 센터 CRM으로 즉시 전송.</td>
+                </tr>
+                <tr>
+                    <td><span class="stage-badge">2. 도심 경험</span><br><br>Urban Hub<br>(호치민)</td>
+                    <td>센터 방문, 개별 맞춤 상담, 1~2시간의 짧은 스파 및 다도 경험</td>
+                    <td>- 선엽스님 철학 기반 개별 체질 상담<br>- 한국 약차 다실 (티마카세)<br>- 침향 아로마 스파</td>
+                    <td><span class="ict-point">[CRM 연동]</span> 상담 결과 및 선호도(차 맛, 향, 스트레스 지수)를 고객 프로필에 업데이트. 자연형 리트릿(업셀링) 자동 추천 알고리즘 적용.</td>
+                </tr>
+                <tr>
+                    <td><span class="stage-badge">3. 심층 치유</span><br><br>Nature Hub<br>(컨터/메콩강)</td>
+                    <td>1박~7박 체류, 스마트폰을 끄고 명상과 디톡스에 집중</td>
+                    <td>- 새벽 차명상, 약초 채집 체험<br>- 한국형 디톡스 식단<br>- 자연 산책 및 회향 다도</td>
+                    <td><span class="ict-point">[Digital Detox]</span> 웨어러블 디바이스(스마트워치)만 제공하여 수면/심박수 등 생체 데이터만 조용히 수집. 스마트폰 없는 완벽한 오프라인 몰입 환경 조성.</td>
+                </tr>
+                <tr>
+                    <td><span class="stage-badge">4. 일상 복귀</span><br><br>Retention</td>
+                    <td>일상에서 차를 마시며 명상, 제품 재구매</td>
+                    <td>- 사후 힐링 상담 (비대면/앱)<br>- 프리미엄 약차/침향 PB 상품<br>- VIP 커뮤니티 (명상 모임)</td>
+                    <td><span class="ict-point">[E-Commerce]</span> 리트릿에서 수집된 생체/체질 데이터를 바탕으로 '나만의 맞춤형 약차 세트' 매월 정기구독(Subcription) 모델 자동 제안.</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 SUNYEOP ZEN RETREAT Project. All rights reserved.</p>
+        <p>Designed by ICT & ODA PMC Expert</p>
+    </footer>
+
+</body>
+</html>

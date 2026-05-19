@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선엽스님 웰니스 브랜드 소개 슬라이드</title>
+    <style>
+        /* 기본 리셋 및 폰트 설정 */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif; background-color: #e9ecef; display: flex; flex-direction: column; align-items: center; padding: 40px 20px; gap: 40px; }
+        
+        /* 슬라이드 공통 스타일 */
+        .slide {
+            width: 100%;
+            max-width: 1000px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+        
+        /* 슬라이드 헤더 (상단 장식) */
+        .slide-header {
+            height: 8px;
+            background: linear-gradient(90deg, #6b8e23, #a2b86c);
+        }
+
+        /* 슬라이드 1: 레이아웃 (좌측 이미지, 우측 텍스트) */
+        .slide-1-content {
+            display: flex;
+            padding: 50px;
+            gap: 40px;
+        }
+        
+        .image-section {
+            flex: 0 0 35%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .image-section img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .image-caption {
+            margin-top: 15px;
+            font-size: 0.85rem;
+            color: #666;
+            text-align: center;
+            line-height: 1.4;
+        }
+
+        .text-section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        /* 타이포그래피 */
+        .badge {
+            display: inline-block;
+            background-color: #f4f6f0;
+            color: #556b2f;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        h1 { font-size: 2.2rem; color: #222; margin-bottom: 10px; line-height: 1.3; }
+        h2 { font-size: 1.2rem; color: #555; font-weight: 400; margin-bottom: 30px; line-height: 1.5; }
+        
+        /* 연혁 리스트 */
+        .history-list { list-style: none; margin-bottom: 30px; }
+        .history-list li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 15px;
+            font-size: 1rem;
+            color: #444;
+            line-height: 1.6;
+        }
+        .history-list li::before {
+            content: '■';
+            position: absolute;
+            left: 0;
+            top: 2px;
+            color: #8fbc8f;
+            font-size: 0.8rem;
+        }
+        .highlight { color: #556b2f; font-weight: 700; }
+
+        /* 인용구 */
+        .quote-box {
+            background-color: #fafafa;
+            border-left: 4px solid #6b8e23;
+            padding: 20px;
+            font-size: 1.05rem;
+            color: #333;
+            font-style: italic;
+            font-weight: 600;
+        }
+
+        /* 슬라이드 2: 레이아웃 */
+        .slide-2-content {
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-top: 40px;
+            width: 100%;
+        }
+
+        .grid-item {
+            background-color: #f9fbf7;
+            padding: 30px 20px;
+            border-radius: 10px;
+            border: 1px solid #eef2e6;
+            transition: transform 0.3s ease;
+        }
+        .grid-item:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.05); }
+        
+        .grid-icon { font-size: 2.5rem; margin-bottom: 15px; }
+        .grid-title { font-size: 1.2rem; color: #222; margin-bottom: 15px; font-weight: 700; }
+        .grid-desc { font-size: 0.95rem; color: #666; line-height: 1.6; }
+
+        .vision-box {
+            margin-top: 40px;
+            padding: 25px 40px;
+            background-color: #2c3e50;
+            color: #fff;
+            border-radius: 8px;
+            width: 100%;
+            font-size: 1.3rem;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+        }
+        .vision-box strong { color: #a2b86c; font-weight: 700; }
+
+    </style>
+</head>
+<body>
+
+    <!-- 슬라이드 1: 브랜드 오리진 및 권위 어필 -->
+    <div class="slide">
+        <div class="slide-header"></div>
+        <div class="slide-1-content">
+            <!-- 좌측: 저서 이미지 영역 -->
+            <div class="image-section">
+                <!-- 첨부해주신 이미지 파일명으로 src를 변경해주세요 -->
+                <img src="선엽스님의_힐링약차_표지.png" alt="선엽스님의 힐링 약차 저서 표지">
+                <div class="image-caption">
+                    "독소는 쏙 빼고 면역력은 끌어올린다!"<br>
+                    <strong>82가지 체질 맞춤 약차 레시피 집대성</strong>
+                </div>
+            </div>
+            
+            <!-- 우측: 텍스트 및 연혁 영역 -->
+            <div class="text-section">
+                <span class="badge">Brand Origin & Authority</span>
+                <h1>수제 약차 명인, 선엽스님</h1>
+                <h2>생사를 오가는 투병에서 피어난 '자연치유'의 기적,<br>글로벌 K-Zen 웰니스의 기준이 되다.</h2>
+                
+                <ul class="history-list">
+                    <li><span class="highlight">글로벌 무대 검증:</span> '차의 나라' 중국 하이난 세계보이차대회 입상 및 CCTV 초청 포럼 강연으로 한국 약차의 우수성 입증</li>
+                    <li><span class="highlight">서구권 웰니스 진출:</span> 미국 뉴욕/뉴저지 초청 '건강 디톡스 티 템플스테이' 진행, 글로벌 명상 수요 확인</li>
+                    <li><span class="highlight">지식재산권(IP) 확보:</span> 저서 《선엽스님의 힐링 약차》 출간, 체질별 맞춤 차 이론 및 자연치유 철학의 학술적 체계화 완성</li>
+                    <li><span class="highlight">오프라인 실증:</span> 남양주 '마음정원' 운영 및 다수 미디어(BBS, BTN, EBS) 출연을 통한 프리미엄 브랜드 인지도 구축</li>
+                </ul>
+
+                <div class="quote-box">
+                    "산과 들에 지천으로 널린 꽃과 풀들이 귀한 약차가 된다."<br>
+                    <span style="font-size: 0.9rem; font-weight: 400; color: #666; margin-top: 5px; display: block;">- 선엽스님, 단순한 차를 넘어 생명을 살리는 치유의 철학</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 슬라이드 2: 타겟 어필 및 비즈니스 가치 -->
+    <div class="slide">
+        <div class="slide-header"></div>
+        <div class="slide-2-content">
+            <span class="badge">Value Proposition for VIP & Partners</span>
+            <h1 style="text-align: center;">왜 선엽스님의 'K-Zen 웰니스'인가?</h1>
+            <h2 style="text-align: center; margin-bottom: 0;">단순한 스파(Spa)를 넘어, 하이엔드 타겟을 위한 '동양 자연치유 플랫폼'</h2>
+
+            <div class="grid-container">
+                <!-- 포인트 1 -->
+                <div class="grid-item">
+                    <div class="grid-icon">🌿</div>
+                    <div class="grid-title">독보적 희소성<br>(Unrivaled Rarity)</div>
+                    <div class="grid-desc">
+                        일반적인 마사지 중심의 웰니스가 아닙니다. <strong>한국 사찰약차 전승자</strong>가 직접 기획한 '수행 기반 차문화'와 '피부 자연요법'이 결합된 대체 불가능한 프리미엄 콘텐츠입니다.
+                    </div>
+                </div>
+                <!-- 포인트 2 -->
+                <div class="grid-item">
+                    <div class="grid-icon">💎</div>
+                    <div class="grid-title">초개인화 VIP 케어<br>(Hyper-Personalized)</div>
+                    <div class="grid-desc">
+                        저서로 입증된 82가지 레시피를 바탕으로, 고객의 <strong>체질 상담부터 맞춤형 약차, 침향 스파, 디톡스 식단</strong>까지 이어지는 완벽한 1:1 맞춤형 힐링 솔루션을 제공합니다.
+                    </div>
+                </div>
+                <!-- 포인트 3 -->
+                <div class="grid-item">
+                    <div class="grid-icon">📈</div>
+                    <div class="grid-title">무한한 확장성<br>(Scalable Business)</div>
+                    <div class="grid-desc">
+                        공간 비즈니스(리트릿)를 넘어, <strong>시그니처 약차/침향 MD 상품 판매</strong> 및 <strong>국제 티테라피 교육 사업</strong>으로 이어지는 다각화된 고수익 비즈니스 모델을 창출합니다.
+                    </div>
+                </div>
+            </div>
+
+            <div class="vision-box">
+                "차를 마시고, 향을 맡고, 피부를 치유하며 자연과 다시 연결되는 곳."<br>
+                <strong>SUNYEOP ZEN RETREAT</strong>은 글로벌 웰니스 시장의 새로운 패러다임입니다.
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

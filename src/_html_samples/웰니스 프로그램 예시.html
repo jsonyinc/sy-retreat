@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUNYEOP ZEN RETREAT - 웰니스 프로그램 프로세스</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #3a4f29; /* 다크 올리브 */
+            --secondary: #8fbc8f; /* 세이지 그린 */
+            --accent: #b8975a; /* 샴페인 골드 */
+            --bg-light: #fbfaf8;
+            --text-main: #2c3e50;
+            --text-muted: #666666;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Noto Sans KR', sans-serif; background-color: #e9ecef; display: flex; justify-content: center; padding: 40px 20px; }
+        
+        .slide-container {
+            width: 100%;
+            max-width: 1200px;
+            background-color: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+            overflow: hidden;
+            padding: 60px;
+        }
+
+        /* 헤더 영역 */
+        .header { text-align: center; margin-bottom: 60px; }
+        .header .badge { display: inline-block; background: rgba(184, 151, 90, 0.1); color: var(--accent); padding: 6px 16px; border-radius: 30px; font-size: 0.9rem; font-weight: 700; letter-spacing: 1px; margin-bottom: 15px; }
+        .header h1 { font-size: 2.4rem; color: var(--primary); font-weight: 700; margin-bottom: 15px; }
+        .header p { font-size: 1.1rem; color: var(--text-muted); }
+
+        /* 1. 기본 프로세스 (Customer Journey) */
+        .process-section { margin-bottom: 70px; }
+        .section-title { font-size: 1.4rem; color: var(--text-main); font-weight: 700; margin-bottom: 30px; text-align: center; border-bottom: 2px solid #f0f0f0; padding-bottom: 15px; }
+        
+        .process-wrapper { display: flex; justify-content: space-between; align-items: flex-start; position: relative; }
+        /* 연결선 */
+        .process-wrapper::before { content: ''; position: absolute; top: 40px; left: 10%; right: 10%; height: 2px; background: dashed 2px var(--secondary); z-index: 1; }
+
+        .step-box { flex: 1; text-align: center; position: relative; z-index: 2; padding: 0 20px; }
+        .step-icon { width: 80px; height: 80px; background: #fff; border: 3px solid var(--secondary); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin: 0 auto 20px auto; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: all 0.3s ease; }
+        .step-box:hover .step-icon { background: var(--secondary); color: #fff; transform: scale(1.1); }
+        
+        .step-title { font-size: 1.2rem; font-weight: 700; color: var(--primary); margin-bottom: 10px; }
+        .step-desc { font-size: 0.95rem; color: var(--text-muted); line-height: 1.5; }
+        
+        /* 중앙 스텝(수행) 강조 */
+        .step-box.active .step-icon { border-color: var(--accent); background: var(--accent); color: #fff; width: 90px; height: 90px; font-size: 2.5rem; }
+        .step-box.active .step-title { color: var(--accent); font-size: 1.3rem; }
+        .core-programs { margin-top: 15px; display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+        .core-tag { background: var(--bg-light); border: 1px solid #e0e0e0; padding: 4px 10px; border-radius: 4px; font-size: 0.85rem; color: var(--text-main); font-weight: 500; }
+
+        /* 2. 맞춤형 웰니스 프로그램 조화 (Dual-Track) */
+        .harmony-section { background: var(--bg-light); padding: 40px; border-radius: 12px; }
+        .harmony-wrapper { display: flex; align-items: stretch; gap: 20px; }
+        
+        .program-card { flex: 1; background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.03); border: 1px solid #eee; }
+        .program-img { height: 180px; overflow: hidden; }
+        .program-img img { width: 100%; height: 100%; object-fit: cover; }
+        .program-content { padding: 25px; }
+        .program-content h3 { font-size: 1.3rem; color: var(--primary); margin-bottom: 15px; }
+        .program-content ul { list-style: none; }
+        .program-content ul li { position: relative; padding-left: 18px; margin-bottom: 8px; font-size: 0.95rem; color: var(--text-muted); }
+        .program-content ul li::before { content: '✓'; position: absolute; left: 0; top: 0; color: var(--secondary); font-weight: bold; }
+
+        .plus-icon { display: flex; align-items: center; justify-content: center; font-size: 2.5rem; color: var(--accent); font-weight: 300; padding: 0 10px; }
+
+        .harmony-conclusion { text-align: center; margin-top: 30px; font-size: 1.1rem; color: var(--text-main); font-weight: 500; padding: 20px; background: #fff; border-radius: 8px; border-left: 4px solid var(--accent); }
+
+        @media (max-width: 900px) {
+            .process-wrapper { flex-direction: column; gap: 40px; }
+            .process-wrapper::before { display: none; }
+            .harmony-wrapper { flex-direction: column; }
+            .plus-icon { padding: 20px 0; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="slide-container">
+    
+    <!-- 슬라이드 헤더 -->
+    <div class="header">
+        <div class="badge">Core Service Architecture</div>
+        <h1>초개인화 맞춤형 웰니스 프로그램</h1>
+        <p>단순한 휴식을 넘어, 고객의 체질과 라이프스타일에 맞춘 근본적인 치유 솔루션을 제공합니다.</p>
+    </div>
+
+    <!-- 1. 기본 프로세스 -->
+    <div class="process-section">
+        <div class="section-title">The Healing Journey (3단계 치유 프로세스)</div>
+        <div class="process-wrapper">
+            
+            <!-- Step 1 -->
+            <div class="step-box">
+                <div class="step-icon">📝</div>
+                <div class="step-title">STEP 1. 체질 상담</div>
+                <div class="step-desc">
+                    선엽스님의 동양의학적 접근을 바탕으로<br>고객의 현재 신체적/정신적 상태와<br>고유의 체질을 정밀하게 진단합니다.
+                </div>
+            </div>
+
+            <!-- Step 2 (핵심) -->
+            <div class="step-box active">
+                <div class="step-icon">🌿</div>
+                <div class="step-title">STEP 2. 맞춤형 웰니스 수행</div>
+                <div class="step-desc">
+                    진단 결과를 바탕으로 오직 한 사람만을 위한<br>K-Zen 자연치유 프로그램을 설계하고 실행합니다.
+                </div>
+                <div class="core-programs">
+                    <span class="core-tag">🍵 힐링약차</span>
+                    <span class="core-tag">🧘 명상</span>
+                    <span class="core-tag">✨ 침향 테라피</span>
+                    <span class="core-tag">🥗 디톡스</span>
+                    <span class="core-tag">💆‍♀️ 피부 자연요법</span>
+                </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="step-box">
+                <div class="step-icon">🍵</div>
+                <div class="step-title">STEP 3. 힐링 상담 (회향)</div>
+                <div class="step-desc">
+                    프로그램 수행 후의 변화를 점검하고,<br>일상으로 돌아가서도 치유를 이어갈 수 있는<br>라이프스타일 및 맞춤 약차를 처방합니다.
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 2. 도심형 + 자연형 조화 -->
+    <div class="harmony-section">
+        <div class="section-title" style="border:none; margin-bottom:20px;">Dual-Track Program Harmony</div>
+        <p style="text-align: center; color: var(--text-muted); margin-bottom: 30px;">고객의 일정과 치유 목적에 따라 두 가지 형태의 프로그램이 유기적으로 조화롭게 운영됩니다.</p>
+        
+        <div class="harmony-wrapper">
+            <!-- 도심형 프로그램 -->
+            <div class="program-card">
+                <div class="program-img">
+                    <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=800&q=80" alt="도심형 웰니스">
+                </div>
+                <div class="program-content">
+                    <h3>🏢 도심형 웰니스 프로그램</h3>
+                    <ul>
+                        <li><strong>목적:</strong> 일상 속 즉각적인 스트레스 완화 및 케어</li>
+                        <li><strong>형태:</strong> 데이 스파(Day Spa), 반나절 리트릿</li>
+                        <li><strong>핵심:</strong> 침향 아로마 스파, 피부 자연요법, 다실 차명상</li>
+                        <li><strong>타겟:</strong> 바쁜 기업가, VIP, 단기 관광객</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 플러스 아이콘 -->
+            <div class="plus-icon">+</div>
+
+            <!-- 자연형 프로그램 -->
+            <div class="program-card">
+                <div class="program-img">
+                    <img src="https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&w=800&q=80" alt="자연형 팜스테이">
+                </div>
+                <div class="program-content">
+                    <h3>🌳 자연형 팜스테이 프로그램</h3>
+                    <ul>
+                        <li><strong>목적:</strong> 몸의 독소를 비우는 근본적인 체질 개선</li>
+                        <li><strong>형태:</strong> 체류형 리트릿 (1박 2일 ~ 7박 8일)</li>
+                        <li><strong>핵심:</strong> 딥 디톡스 식단, 대자연 명상, 약초 채집 체험</li>
+                        <li><strong>타겟:</strong> 심화 치유 목적객, 웰니스 관광객</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- 결론 박스 -->
+        <div class="harmony-conclusion">
+            "도심 센터에서의 <strong>일상적 케어(Daily Care)</strong>와 팜스테이에서의 <strong>집중 치유(Deep Detox)</strong>가 결합되어,<br>단절없는 완벽한 <strong>K-Zen 웰니스 라이프스타일</strong>을 완성합니다."
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

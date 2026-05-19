@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선엽스님 베트남 파트너십 요약 슬라이드</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* 기본 리셋 및 배경 */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Noto Sans KR', sans-serif; background-color: #e9ecef; display: flex; flex-direction: column; align-items: center; padding: 40px 20px; gap: 40px; }
+        
+        /* 슬라이드 공통 규격 (16:9 비율 근사치) */
+        .slide {
+            width: 100%;
+            max-width: 1100px;
+            min-height: 620px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+        
+        /* 상단 데코레이션 바 */
+        .slide-header-bar { height: 8px; background: linear-gradient(90deg, #4b6b23, #8fbc8f); }
+        
+        /* 슬라이드 내부 패딩 */
+        .slide-content { padding: 40px 50px; flex: 1; display: flex; flex-direction: column; }
+
+        /* 타이틀 영역 */
+        .slide-title { font-size: 2rem; color: #2c3e50; margin-bottom: 10px; font-weight: 700; }
+        .slide-subtitle { font-size: 1.1rem; color: #666; margin-bottom: 30px; border-bottom: 2px solid #eef2e6; padding-bottom: 15px; }
+
+        /* 뱃지 */
+        .badge { display: inline-block; background-color: #f4f6f0; color: #556b2f; padding: 5px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 700; margin-bottom: 10px; }
+
+        /* 슬라이드 1: 카테고리 그리드 */
+        .category-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; flex: 1; }
+        .category-card { background-color: #f9fbf7; border: 1px solid #eef2e6; border-radius: 10px; padding: 25px; display: flex; flex-direction: column; }
+        .cat-icon { font-size: 2.5rem; margin-bottom: 15px; }
+        .cat-title { font-size: 1.2rem; color: #222; font-weight: 700; margin-bottom: 10px; }
+        .cat-groups { font-size: 0.9rem; color: #4a90e2; font-weight: 700; margin-bottom: 15px; background: #e3f2fd; padding: 5px 10px; border-radius: 4px; display: inline-block; }
+        .cat-desc { font-size: 0.95rem; color: #555; line-height: 1.6; margin-bottom: 15px; flex: 1; }
+        .cat-synergy { background-color: #fff; border-left: 4px solid #6b8e23; padding: 12px; font-size: 0.9rem; color: #333; font-weight: 500; }
+
+        /* 슬라이드 2: 시너지 아키텍처 & 시사점 */
+        .architecture-box { display: flex; align-items: center; justify-content: space-between; background-color: #f4f7f6; padding: 30px; border-radius: 10px; margin-bottom: 40px; }
+        .arch-item { flex: 1; text-align: center; padding: 20px; background: #fff; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+        .arch-item h3 { font-size: 1.2rem; color: #2c3e50; margin-bottom: 10px; }
+        .arch-item p { font-size: 0.95rem; color: #666; line-height: 1.5; }
+        .arch-operator { font-size: 2.5rem; color: #a2b86c; font-weight: 700; padding: 0 20px; }
+        .arch-result { background: #2c3e50; color: #fff; }
+        .arch-result h3 { color: #a2b86c; }
+        .arch-result p { color: #ddd; }
+
+        .insights-container { display: flex; gap: 20px; }
+        .insight-box { flex: 1; background-color: #fff8e1; border-top: 4px solid #ffb300; padding: 20px; border-radius: 6px; }
+        .insight-box h4 { font-size: 1.1rem; color: #d84315; margin-bottom: 10px; }
+        .insight-box p { font-size: 0.95rem; color: #444; line-height: 1.5; }
+
+    </style>
+</head>
+<body>
+
+    <!-- 슬라이드 1: 파트너십 타겟 그룹핑 -->
+    <div class="slide">
+        <div class="slide-header-bar"></div>
+        <div class="slide-content">
+            <span class="badge">Target Strategy</span>
+            <h1 class="slide-title">베트남 진출 전략적 파트너십 매핑</h1>
+            <div class="slide-subtitle">10대 잠재 협력 그룹사를 3대 핵심 카테고리로 병합하여 맞춤형 제안 추진</div>
+
+            <div class="category-grid">
+                <!-- 카테고리 1 -->
+                <div class="category-card">
+                    <div class="cat-icon">🏨</div>
+                    <div class="cat-title">초럭셔리 리조트 & 호스피탈리티</div>
+                    <div class="cat-groups">Vingroup, Sun Group, BRG, BIM, Nova</div>
+                    <div class="cat-desc">
+                        베트남 최고급 인프라를 보유한 그룹. 단순 서양식 스파를 넘어 아시아 전통 치유 콘텐츠에 목말라 있음.
+                    </div>
+                    <div class="cat-synergy">
+                        <strong>[협력 모델]</strong><br>
+                        도심 5성급 호텔 및 메가 리조트 내 'VIP K-Zen 웰니스 센터' 숍인숍 입점
+                    </div>
+                </div>
+
+                <!-- 카테고리 2 -->
+                <div class="category-card">
+                    <div class="cat-icon">🌿</div>
+                    <div class="cat-title">에코 팜스테이 & 라이프스타일</div>
+                    <div class="cat-groups">Flamingo, TTC, Sovico</div>
+                    <div class="cat-desc">
+                        대자연(숲, 바다) 기반의 에코 리조트 및 항공(비엣젯) 연계 관광 인프라를 보유한 그룹.
+                    </div>
+                    <div class="cat-synergy">
+                        <strong>[협력 모델]</strong><br>
+                        자연형 팜스테이 리트릿 공동 개발 및 항공권 연계 디톡스 투어 패키지 론칭
+                    </div>
+                </div>
+
+                <!-- 카테고리 3 -->
+                <div class="category-card">
+                    <div class="cat-icon">🍵</div>
+                    <div class="cat-title">F&B 유통 & 헬스케어 R&D</div>
+                    <div class="cat-groups">Trung Nguyen Legend, TH Group</div>
+                    <div class="cat-desc">
+                        'Zen(선) 철학'을 표방하는 1위 커피 그룹 및 대규모 약초/의료 인프라를 보유한 헬스케어 그룹.
+                    </div>
+                    <div class="cat-synergy">
+                        <strong>[협력 모델]</strong><br>
+                        베트남 침향/약초 활용 기능성 약차 공동 R&D 및 전국 VIP 라운지 B2B 유통
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 슬라이드 2: 시너지 아키텍처 및 시사점 -->
+    <div class="slide">
+        <div class="slide-header-bar"></div>
+        <div class="slide-content">
+            <span class="badge">Business Architecture & Insights</span>
+            <h1 class="slide-title">K-Zen 웰니스 융합 비즈니스 모델</h1>
+            <div class="slide-subtitle">소프트웨어(선엽스님 IP)와 하드웨어(베트남 자본)의 결합을 통한 리스크 최소화 및 스케일업</div>
+
+            <!-- 아키텍처 도식화 -->
+            <div class="architecture-box">
+                <div class="arch-item">
+                    <h3>선엽스님 K-Zen 코어<br><span style="font-size:0.9rem; color:#888;">(Software & IP)</span></h3>
+                    <p>한국 사찰 약차 레시피<br>체질 맞춤형 자연치유 철학<br>K-Zen 차명상 프로그램</p>
+                </div>
+                <div class="arch-operator">✖</div>
+                <div class="arch-item">
+                    <h3>베트남 Top 그룹사<br><span style="font-size:0.9rem; color:#888;">(Hardware & Capital)</span></h3>
+                    <p>초럭셔리 리조트 공간<br>막강한 VIP 고객 풀<br>현지 약초/침향 인프라</p>
+                </div>
+                <div class="arch-operator">＝</div>
+                <div class="arch-item arch-result">
+                    <h3>SUNYEOP ZEN RETREAT<br><span style="font-size:0.9rem; color:#a2b86c;">(Global Wellness Platform)</span></h3>
+                    <p>도심형 VIP 웰니스 센터<br>자연형 팜스테이 리트릿<br>글로벌 MD 상품 수출</p>
+                </div>
+            </div>
+
+            <!-- 핵심 시사점 -->
+            <div class="insights-container">
+                <div class="insight-box">
+                    <h4>1. K-Culture 프리미엄 활용</h4>
+                    <p>단순 제휴가 아닌 "한국 전통 사찰 치유의 정수를 베트남 VIP에게 독점 제공한다"는 문화적 우위와 희소성을 강조하여 협상 주도권 확보.</p>
+                </div>
+                <div class="insight-box">
+                    <h4>2. B2B 마스터 프랜차이즈 지향</h4>
+                    <p>직접 매장을 짓고 운영하는 리스크를 배제. 그룹사에 공간/자본 투자를 맡기고, 프로그램 기획 및 로열티(위탁 경영) 수익을 창출하는 모델.</p>
+                </div>
+                <div class="insight-box">
+                    <h4>3. 침향(Agarwood) 스토리텔링</h4>
+                    <p>베트남의 풍부한 자원인 '침향'을 한국 명인의 비법으로 가공하여 부가가치를 극대화한다는 논리로 현지 대기업의 R&D 투자 유도.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

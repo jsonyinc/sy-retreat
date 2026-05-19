@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUNYEOP ZEN RETREAT - 공간 구성 및 시너지 시안</title>
+    <!-- 폰트: 럭셔리한 느낌을 위한 명조체(Playfair)와 깔끔한 고딕체(Noto Sans) 혼용 -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #4a5d23; /* 깊은 올리브 그린 */
+            --secondary-color: #8fbc8f; /* 세이지 그린 */
+            --bg-color: #f9f8f6; /* 웜 베이지 */
+            --text-dark: #2c3e50;
+            --text-light: #666666;
+            --gold: #b8975a;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Noto Sans KR', sans-serif; background-color: var(--bg-color); color: var(--text-dark); line-height: 1.6; }
+        
+        .container { max-width: 1200px; margin: 0 auto; padding: 60px 20px; }
+
+        /* 헤더 영역 */
+        .header { text-align: center; margin-bottom: 60px; }
+        .header h4 { font-family: 'Playfair Display', serif; color: var(--gold); font-size: 1.2rem; letter-spacing: 3px; margin-bottom: 10px; text-transform: uppercase; }
+        .header h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 15px; color: var(--primary-color); }
+        .header p { font-size: 1.1rem; color: var(--text-light); max-width: 700px; margin: 0 auto; }
+
+        /* 시너지 루프 (도심 <-> 자연) */
+        .synergy-section { background: #fff; padding: 40px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); margin-bottom: 80px; text-align: center; }
+        .synergy-title { font-size: 1.5rem; font-weight: 700; margin-bottom: 30px; }
+        .synergy-flow { display: flex; align-items: center; justify-content: center; gap: 20px; flex-wrap: wrap; }
+        
+        .flow-card { flex: 1; min-width: 280px; padding: 30px; border-radius: 12px; position: relative; overflow: hidden; color: #fff; text-align: left; }
+        .flow-card::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 1; }
+        .flow-card img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
+        .flow-content { position: relative; z-index: 2; }
+        .flow-content h3 { font-size: 1.5rem; margin-bottom: 10px; font-family: 'Playfair Display', serif; }
+        .flow-content p { font-size: 0.95rem; opacity: 0.9; }
+        
+        .flow-arrow { font-size: 2rem; color: var(--gold); font-weight: bold; }
+
+        /* 도심형 웰니스 센터 4대 공간 그리드 */
+        .section-title { text-align: center; font-size: 2rem; font-weight: 700; margin-bottom: 15px; color: var(--primary-color); }
+        .section-subtitle { text-align: center; font-size: 1.05rem; color: var(--text-light); margin-bottom: 50px; }
+
+        .space-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 30px; }
+        
+        .space-card { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.04); transition: transform 0.3s ease; display: flex; flex-direction: column; }
+        .space-card:hover { transform: translateY(-10px); box-shadow: 0 15px 40px rgba(0,0,0,0.1); }
+        
+        .space-img { height: 280px; overflow: hidden; position: relative; }
+        .space-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+        .space-card:hover .space-img img { transform: scale(1.05); }
+        .space-badge { position: absolute; top: 20px; left: 20px; background: rgba(255,255,255,0.9); color: var(--primary-color); padding: 5px 15px; font-size: 0.8rem; font-weight: 700; border-radius: 20px; letter-spacing: 1px; }
+
+        .space-info { padding: 30px; flex: 1; display: flex; flex-direction: column; }
+        .space-info h3 { font-size: 1.4rem; color: var(--text-dark); margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 15px; }
+        .space-info ul { list-style: none; margin-bottom: 20px; flex: 1; }
+        .space-info ul li { position: relative; padding-left: 20px; margin-bottom: 10px; font-size: 0.95rem; color: var(--text-light); }
+        .space-info ul li::before { content: '✦'; position: absolute; left: 0; top: 2px; color: var(--gold); font-size: 0.8rem; }
+        
+        .space-mood { background: var(--bg-color); padding: 15px; border-radius: 8px; font-size: 0.9rem; color: var(--primary-color); font-weight: 500; display: flex; align-items: center; gap: 10px; }
+        .space-mood i { font-style: normal; font-size: 1.2rem; }
+
+        /* 반응형 */
+        @media (max-width: 768px) {
+            .space-grid { grid-template-columns: 1fr; }
+            .flow-arrow { transform: rotate(90deg); margin: 10px 0; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- 헤더 -->
+    <div class="header">
+        <h4>Spatial Design & Synergy</h4>
+        <h1>SUNYEOP ZEN RETREAT</h1>
+        <p>도심에서의 일상적 비움과 대자연에서의 깊은 채움이 교차하는 완벽한 웰니스 생태계</p>
+    </div>
+
+    <!-- 1. 비즈니스 연계 시너지 루프 -->
+    <div class="synergy-section">
+        <div class="synergy-title">The Infinity Healing Loop (유기적 비즈니스 연계)</div>
+        <div class="synergy-flow">
+            <!-- 도심형 -->
+            <div class="flow-card">
+                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="Urban Center">
+                <div class="flow-content">
+                    <h3>Urban Wellness Center</h3>
+                    <p><strong>[호치민/하노이 도심]</strong><br>VIP 고객의 일상적 접근성 확보. 체질 상담, 데이 스파, 약차 구매를 통한 1차 고객 접점 및 리드(Lead) 창출.</p>
+                </div>
+            </div>
+            
+            <div class="flow-arrow">⇄</div>
+            
+            <!-- 자연형 -->
+            <div class="flow-card">
+                <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=800&q=80" alt="Nature Retreat">
+                <div class="flow-content">
+                    <h3>Nature Farmstay Retreat</h3>
+                    <p><strong>[컨터/메콩강 대자연]</strong><br>도심 센터에서 검증된 VIP 고객을 대상으로 한 고단가 체류형(1~7박) 심화 디톡스 및 숲속 차명상 프로그램.</p>
+                </div>
+            </div>
+        </div>
+        <p style="margin-top: 25px; font-size: 0.95rem; color: var(--text-light);">
+            * 도심 센터는 <strong>'브랜드 쇼룸 및 일상 케어'</strong> 역할을, 자연형 센터는 <strong>'고수익 프리미엄 리트릿'</strong> 역할을 수행하며 상호 고객을 순환시킵니다.
+        </p>
+    </div>
+
+    <!-- 2. 도심형 웰니스 센터 4대 공간 구성 -->
+    <div class="section-title">도심형 웰니스 센터 공간 구성 시안</div>
+    <div class="section-subtitle">VIP 고객의 오감(五感)을 만족시키는 4가지 핵심 K-Zen 힐링 스페이스</div>
+
+    <div class="space-grid">
+        
+        <!-- 공간 1: 약차 다실 -->
+        <div class="space-card">
+            <div class="space-img">
+                <div class="space-badge">ZONE 01</div>
+                <img src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=800&q=80" alt="한국 약차 다실">
+            </div>
+            <div class="space-info">
+                <h3>Heritage Tea Lounge<br><span style="font-size:1rem; color:#888;">한국 약차 다실</span></h3>
+                <ul>
+                    <li><strong>제공:</strong> 체질별 맞춤 약차, 계절 꽃차, 침향차, 수면/디톡스차</li>
+                    <li><strong>기능:</strong> 웰컴 라운지 및 약차/MD 상품 전시 및 판매 공간</li>
+                    <li><strong>디자인:</strong> 한국 사찰 다실의 미니멀리즘 현대적 재해석</li>
+                </ul>
+                <div class="space-mood">
+                    <i>🍵</i> 연출 무드: 전통 한지, 짙은 목재, 자연석, 은은한 명상 음악
+                </div>
+            </div>
+        </div>
+
+        <!-- 공간 2: 침향 스파 -->
+        <div class="space-card">
+            <div class="space-img">
+                <div class="space-badge">ZONE 02</div>
+                <img src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&fit=crop&w=800&q=80" alt="침향 아로마 스파">
+            </div>
+            <div class="space-info">
+                <h3>Agarwood Sanctuary<br><span style="font-size:1rem; color:#888;">침향 아로마 스파</span></h3>
+                <ul>
+                    <li><strong>프로그램:</strong> 침향 오일 마사지, 두피 순환 케어, 숙면 테라피</li>
+                    <li><strong>기능:</strong> "향으로 마음을 치료하는" 프라이빗 심신 안정 케어</li>
+                    <li><strong>디자인:</strong> 조도를 낮춘 프라이빗 룸, 간접 조명, 향로 오브제</li>
+                </ul>
+                <div class="space-mood">
+                    <i>✨</i> 연출 무드: 베트남 최고급 침향의 깊은 향, 따뜻한 온기, 완벽한 고요
+                </div>
+            </div>
+        </div>
+
+        <!-- 공간 3: 피부 자연요법 -->
+        <div class="space-card">
+            <div class="space-img">
+                <div class="space-badge">ZONE 03</div>
+                <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?auto=format&fit=crop&w=800&q=80" alt="피부 자연요법 센터">
+            </div>
+            <div class="space-info">
+                <h3>Botanica Skin Clinic<br><span style="font-size:1rem; color:#888;">피부 자연요법 센터</span></h3>
+                <ul>
+                    <li><strong>프로그램:</strong> 약초 스팀, 한방 피부팩, 발효 약초 케어, 약초 족욕</li>
+                    <li><strong>기능:</strong> 선엽스님의 강점인 '식물 기반 문제성 피부 회복'</li>
+                    <li><strong>디자인:</strong> 자연 채광이 들어오는 밝고 깨끗한 에코-메디컬 무드</li>
+                </ul>
+                <div class="space-mood">
+                    <i>🌿</i> 연출 무드: 신선한 약초 내음, 화이트 & 세이지 그린 톤, 청결함
+                </div>
+            </div>
+        </div>
+
+        <!-- 공간 4: 디톡스/명상 라운지 -->
+        <div class="space-card">
+            <div class="space-img">
+                <div class="space-badge">ZONE 04</div>
+                <img src="https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=800&q=80" alt="디톡스 및 명상 라운지">
+            </div>
+            <div class="space-info">
+                <h3>Zen Detox & Consultation<br><span style="font-size:1rem; color:#888;">한국형 디톡스 & 명상 라운지</span></h3>
+                <ul>
+                    <li><strong>프로그램:</strong> 1:1 체질 상담, 도심형 데이(Day) 디톡스, 싱잉볼 명상</li>
+                    <li><strong>기능:</strong> 고객의 상태를 진단하고 팜스테이(심화)로 연결하는 허브</li>
+                    <li><strong>디자인:</strong> 시각적 자극을 최소화한 여백의 미, 좌식 명상 쿠션</li>
+                </ul>
+                <div class="space-mood">
+                    <i>🧘‍♀️</i> 연출 무드: 완벽한 비움(Zen), 부드러운 패브릭, 싱잉볼의 파동
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

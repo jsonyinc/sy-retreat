@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUNYEOP ZEN RETREAT | 동양 자연치유 웰니스 플랫폼</title>
+    <!-- 폰트 및 기본 스타일링 -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-dark: #0B192C;
+            --primary-teal: #00E5FF;
+            --text-light: #F8F9FA;
+            --text-dark: #333333;
+            --bg-light: #F4F7F6;
+        }
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            line-height: 1.6;
+        }
+        header {
+            background-color: var(--primary-dark);
+            color: var(--text-light);
+            padding: 80px 20px;
+            text-align: center;
+        }
+        header h1 {
+            color: var(--primary-teal);
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        header p {
+            font-size: 1.2rem;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+        section {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 40px 20px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        h2 {
+            color: var(--primary-dark);
+            border-bottom: 2px solid var(--primary-teal);
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .card {
+            background: var(--bg-light);
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-teal);
+        }
+        .card h3 {
+            margin-top: 0;
+            color: var(--primary-dark);
+        }
+        /* Mermaid 다이어그램 중앙 정렬 */
+        .mermaid {
+            display: flex;
+            justify-content: center;
+            margin: 30px 0;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: var(--primary-dark);
+            color: white;
+            font-size: 0.9rem;
+        }
+    </style>
+    <!-- Mermaid.js 라이브러리 로드 -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true, theme: 'default' });
+    </script>
+</head>
+<body>
+
+    <!-- Header / Hero Section -->
+    <header>
+        <h1>SUNYEOP ZEN RETREAT</h1>
+        <p>한국형 자연치유(K-Wellness)와 베트남 웰니스 생태계의 전략적 결합</p>
+        <p>동양 자연치유 웰니스의 새로운 기준을 제시합니다.</p>
+    </header>
+
+    <!-- Section 1: 프로젝트 핵심 가치 -->
+    <section id="about">
+        <h2>프로젝트 핵심 가치 (Core Value)</h2>
+        <p>단순한 스파나 마사지 샵이 아닙니다. 선엽스님의 20년 치유 노하우가 담긴 <strong>'한국 사찰약차'</strong>와 베트남의 <strong>'침향 및 약초'</strong>를 결합하여, 능동적 치유와 내면의 성장을 돕는 프리미엄 리트릿(Retreat) 플랫폼입니다.</p>
+    </section>
+
+    <!-- Section 2: 비즈니스 모델 아키텍처 (Mermaid 연동) -->
+    <section id="architecture">
+        <h2>K-Zen 웰니스 융합 비즈니스 모델</h2>
+        <p>소프트웨어(선엽스님 지적재산)와 하드웨어(베트남 자본)의 결합을 통한 리스크 최소화 및 스케일업 전략입니다.</p>
+        <!-- Mermaid 다이어그램 삽입부 -->
+        <div class="mermaid">
+            flowchart LR
+                subgraph IP ["🧠 선엽스님 K-Zen 코어 (Software & IP)"]
+                    direction TB
+                    IP1("🍵 한국 사찰 약차 레시피")
+                    IP2("🧘‍♀️ 체질 맞춤형 자연치유 철학")
+                    IP3("🌿 K-Zen 차명상 프로그램")
+                end
+
+                subgraph Capital ["🏢 베트남 Top 그룹사 (Hardware & Capital)"]
+                    direction TB
+                    C1("🏨 초럭셔리 리조트 공간")
+                    C2("💎 막강한 VIP 고객 풀")
+                    C3("🪵 현지 약초/침향 인프라")
+                end
+
+                subgraph Platform ["🌐 SUNYEOP ZEN RETREAT (Global Platform)"]
+                    direction TB
+                    P1("✨ 도심형 VIP 웰니스 센터")
+                    P2("🏕️ 자연형 팜스테이 리트릿")
+                    P3("📦 글로벌 MD 상품 수출")
+                end
+
+                IP -->|"K-Culture 프리미엄 독점 제공"| Platform
+                Capital -->|"공간/자본 투자 (B2B 마스터 프랜차이즈)"| Platform
+        </div>
+    </section>
+
+    <!-- Section 3: 도심-자연 선순환 생태계 (Mermaid 연동) -->
+    <section id="ecosystem">
+        <h2>도심 & 자연 유기적 선순환 구조 (Ecosystem Design)</h2>
+        <p>고객(VIP) 데이터를 통합하여, 도심에서 경험한 고객이 자연형 리트릿으로 유입되는 교차 판매(Cross-selling) 구조를 완성합니다.</p>
+        <!-- Mermaid 다이어그램 삽입부 -->
+        <div class="mermaid">
+            graph LR
+                subgraph Synergy [Synergy: VIP 데이터 통합 및 교차 판매 선순환]
+                    direction LR
+                    U["🏢 Urban Hub (호치민)<br><br>1단계: 도심형 웰니스 센터<br>- VIP/기업가/한류층 타겟<br>- 일상 속 디톡스 및 힐링"] 
+                    
+                    N["🌿 Nature Hub (컨터/메콩강)<br><br>2단계: 자연형 팜스테이<br>- 체류형 리트릿 (1박~7박)<br>- 깊은 치유 및 수행 공간"]
+                    
+                    U == "VIP 고객 유입 & 브랜드 신뢰 확보" ==> N
+                    N == "일상 복귀 후 지속적인 웰니스 관리" ==> U
+                end
+        </div>
+    </section>
+
+    <!-- Section 4: 4대 핵심 공간 설계 -->
+    <section id="spaces">
+        <h2>도심형 웰니스 센터 4대 핵심 공간</h2>
+        <div class="grid-container">
+            <div class="card">
+                <h3>① 한국 약차 다실</h3>
+                <p><strong>[컨셉]</strong> 사찰 다실 분위기 (한지, 목재, 향)<br><strong>[제공]</strong> 체질별/계절 약차, 꽃차, 수면차</p>
+            </div>
+            <div class="card">
+                <h3>② 침향 아로마 스파</h3>
+                <p><strong>[컨셉]</strong> 침향으로 마음을 치료<br><strong>[제공]</strong> 침향 오일 마사지, 두피 순환, 명상 테라피</p>
+            </div>
+            <div class="card">
+                <h3>③ 피부 자연요법 센터</h3>
+                <p><strong>[컨셉]</strong> 베트남 약초와 K-뷰티의 만남<br><strong>[제공]</strong> 약초 스팀, 한방 피부팩, 발효 약초 케어</p>
+            </div>
+            <div class="card">
+                <h3>④ 한국형 디톡스 룸</h3>
+                <p><strong>[컨셉]</strong> 몸을 비우고 마음을 맑히다<br><strong>[제공]</strong> 체질별 맞춤 디톡스 프로그램</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 SUNYEOP ZEN RETREAT Project. All rights reserved.</p>
+        <p>Designed by ICT & ODA PMC Expert</p>
+    </footer>
+
+</body>
+</html>
