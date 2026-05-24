@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Inter, Black_Han_Sans } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
+// [추가됨] Vercel Analytics 불러오기
+import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({subsets:['latin'],variable:'--font-sans'});
 
@@ -65,7 +67,11 @@ export default function RootLayout({
       lang="ko"
       className={cn("h-full", "antialiased", geistSans.variable, geistMono.variable, "font-sans", inter.variable, blackHanSans.variable)}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        {children}
+        {/* [추가됨] 웹사이트 전체에 분석기 작동 */}
+        <Analytics />
+      </body>
     </html>
   );
 }
