@@ -1,9 +1,9 @@
-# SUNYEOP ZEN RETREAT - Technical & Architectural Rules
+# SUNYEOP WELLNESS - Technical & Architectural Rules
 
 ## 1. Core Tech Stack
 - **Framework:** Next.js 15 (App Router)
 - **Language:** TypeScript (Strict Mode)
-- **Styling:** TailwindCSS (Utility-first)
+- **Styling:** TailwindCSS v4 (Utility-first, `@theme` 블록 사용)
 - **UI Components:** shadcn/ui (Radix Primitives 기반)
 - **Backend/DB:** Supabase (via Server Actions)
 - **i18n (다국어):** `next-intl` 또는 Next.js App Router 공식 다국어 딕셔너리 패턴 사용
@@ -14,13 +14,13 @@
 - **컴포넌트 분리:** 재사용 가능한 UI는 `src/components/ui/`에, 비즈니스 로직이 포함된 도메인 컴포넌트는 `src/components/domain/`에 배치한다.
 - **서버 로직:** DB 통신 등 서버 로직은 `src/lib/` 또는 Next.js Server Actions (`use server`)를 사용한다.
 
-## 3. UI/UX Design System Guidelines (Luxury Wellness)
-글로벌 하이엔드 리트릿 타겟층에게 심리적 안정감과 프리미엄 가치를 전달하기 위해 'Luxury Earth Tone'을 엄격히 적용한다.
-- **Primary Color:** Deep Olive Green (`#2C3E1A`) - 선(Zen)과 대자연을 상징
-- **Secondary Color:** Muted Sage (`#8FBC8F`) - 테두리 및 부드러운 배경 요소
-- **Background Color:** Warm Oatmeal Ivory (`#F9F6F0`) - 눈의 피로를 막고 고급스러운 질감 제공
-- **Accent Color:** Champagne Gold (`#C5A880`) - CTA(Call-to-Action) 버튼 및 VIP 강조 포인트
-- **Typography:** Headings는 우아한 Serif 폰트, Body는 가독성 높은 Sans-serif 폰트 적용.
+## 3. UI/UX Design System Guidelines (SUNYEOP WELLNESS BI 2.0)
+글로벌 하이엔드 리트릿 타겟층에게 심리적 안정감과 프리미엄 가치를 전달하기 위해 공식 BI 2.0 가이드라인을 엄격히 적용한다.
+- **Primary Color:** Deep Forest Ink Green (`#1A3322`) - 깊이감, 신뢰, 하이엔드 브랜드 선호
+- **Accent Color:** Champagne Gold (`#C5A880`) - 초 프리미엄, 권위, 핵심 심볼, CTA 버튼
+- **Background Color:** Oatmeal Sand (`#FBF9F4`) - 따뜻한 질감, 여백 활용, 젊고 깨끗한 인상
+- **Text & UI Color:** Charcoal Dark Gray (`#222222`) - 눈의 피로도 감소, 디지털 최적화
+- **Typography:** 영문 제목/로고(`Cormorant Garamond`), 한글 제목/로고(`Noto Serif KR`), 본문/UI(`Pretendard`), 영문 UI(`Montserrat`).
 
 ## 4. Security & Data Integrity (보안 필수 규칙)
 - **절대 금지:** 클라이언트 사이드(브라우저)에서 `supabase-js`를 사용하여 직접 DB에 데이터를 Insert/Update 하지 마라.
