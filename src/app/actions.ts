@@ -53,7 +53,7 @@ export async function submitInquiry(formData: FormData): Promise<InquiryResponse
       return { success: false, message: '데이터베이스 저장 중 오류가 발생했습니다.' }
     }
 
-    return { success: true, message: '사전 초대 신청이 성공적으로 완료되었습니다.' }
+    return { success: true, message: '문의가 성공적으로 접수되었습니다. 담당자가 확인 후 신속히 연락드리겠습니다.' }
     
   } catch (err) {
     console.error('Server Action Error:', err)
