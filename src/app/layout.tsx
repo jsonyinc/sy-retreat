@@ -22,9 +22,37 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+// [업데이트됨] SEO 및 소셜 미디어 공유(OG Tag)를 위한 메타데이터 고도화
 export const metadata: Metadata = {
-  title: "SUNYEOP ZEN RETREAT | 선엽 리트릿",
-  description: "한국 사찰약차와 자연치유 철학, 베트남의 침향과 약초가 만나는 동양 자연치유 웰니스 플랫폼",
+  metadataBase: new URL("https://sunyeop.aionlabs.kr"),
+  title: "SUNYEOP WELLNESS | 동양 자연치유 웰니스 플랫폼",
+  description: "미슐랭 셰프 200인이 인정한 세계적인 프리미엄 명차. 선엽스님의 자연치유 철학과 베트남의 대자연이 만나는 K-Zen 웰니스 비즈니스 제안서입니다.",
+  
+  // 카카오톡, Zalo, 페이스북, 링크드인 등 일반적인 SNS 공유용 설정
+  openGraph: {
+    title: "SUNYEOP WELLNESS | 동양 자연치유 웰니스 플랫폼",
+    description: "미슐랭 셰프 200인이 인정한 세계적인 프리미엄 명차. 선엽스님의 자연치유 철학과 베트남의 대자연이 만나는 K-Zen 웰니스 비즈니스 제안서입니다.",
+    url: "https://sunyeop.aionlabs.kr",
+    siteName: "SUNYEOP WELLNESS",
+    images: [
+      {
+        url: "/images/hero-bg.jpg", // 지정해주신 썸네일 이미지 적용
+        width: 1200,
+        height: 630,
+        alt: "SUNYEOP WELLNESS - 동양 자연치유 웰니스 플랫폼",
+      },
+    ],
+    locale: "ko_KR",
+    type: "website",
+  },
+  
+  // 트위터(X), 슬랙, 텔레그램 등 큰 이미지 카드를 지원하는 플랫폼용 설정
+  twitter: {
+    card: "summary_large_image",
+    title: "SUNYEOP WELLNESS | 동양 자연치유 웰니스 플랫폼",
+    description: "미슐랭 셰프 200인이 인정한 세계적인 프리미엄 명차. 선엽스님의 자연치유 철학과 베트남의 대자연이 만나는 K-Zen 웰니스 비즈니스 제안서입니다.",
+    images: ["/images/hero-bg.jpg"],
+  },
 };
 
 export default function RootLayout({
