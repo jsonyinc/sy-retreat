@@ -25,5 +25,5 @@ export default async function middleware(request: NextRequest) {
 export const config = {
   // api, _next/static, _next/image, favicon.ico, images 폴더 등 
   // 시스템 및 정적 파일 경로를 엄격히 제외(Exclude)하여 무한 루프를 차단합니다.
-  matcher: ['/((?!api|_next/static|_next/image|favicon.ico|images|.*\\..*).*)']
+  matcher: ['/((?!api|_next/static|_next/image|favicon.ico|images|greensoultea|.*\\..*).*)']
 };
